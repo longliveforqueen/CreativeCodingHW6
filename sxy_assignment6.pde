@@ -42,14 +42,22 @@ void draw() {
 void getNeighbors() {
   for (int r = 0; r < SIZE; r++) {//row
     for (int c = 0; c < SIZE; c++) {//col
-      if (r-1 >= 0 && c-1 >= 0   && table[r-1][c-1] )neighbors[r][c]++;
-      if (r-1 >= 0 && table[r-1][c])             neighbors[r][c]++;
-      if (r-1 >= 0 && c+1 < SIZE && table[r-1][c+1])neighbors[r][c]++;
-      if (c-1 >= 0 && table[r][c-1]) neighbors[r][c]++;
-      if (c+1 < SIZE && table[r][c+1]) neighbors[r][c]++;
-      if (r+1 < SIZE && table[r+1][c]) neighbors[r][c]++;
-      if (r+1 < SIZE && c+1 < SIZE && table[r+1][c+1])    neighbors[r][c]++;
-      if (r+1 < SIZE && c-1 >=0 && table[r+1][c-1])       neighbors[r][c]++;
+      if (r-1 >= 0 && c-1 >= 0   && table[r-1][c-1] )
+        neighbors[r][c]++;
+      if (r-1 >= 0 && table[r-1][c])             
+        neighbors[r][c]++;
+      if (r-1 >= 0 && c+1 < SIZE && table[r-1][c+1])
+        neighbors[r][c]++;
+      if (c-1 >= 0 && table[r][c-1]) 
+        neighbors[r][c]++;
+      if (c+1 < SIZE && table[r][c+1]) 
+        neighbors[r][c]++;
+      if (r+1 < SIZE && table[r+1][c]) 
+        neighbors[r][c]++;
+      if (r+1 < SIZE && c+1 < SIZE && table[r+1][c+1])    
+        neighbors[r][c]++;
+      if (r+1 < SIZE && c-1 >=0 && table[r+1][c-1])       
+        neighbors[r][c]++;
     }
   }//end doubleLoop
 }
